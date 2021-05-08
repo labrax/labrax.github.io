@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Welcome to Jekyll!"
+title:  "Welcome!"
 date:   2021-05-07 20:00:00 +0100
 categories:
   - blog
