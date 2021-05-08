@@ -59,6 +59,6 @@ To calculate the AUC value sum the different Sensitivity values for each increme
 
 More details about metrics check <a class="external-url" href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia</a>.
 
-File created here:
+Sample files:
 - [Excel](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.xlsx)
 - [Open document format](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.ods)
