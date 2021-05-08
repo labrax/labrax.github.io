@@ -11,7 +11,7 @@ tags:
 ---
 Area Under the ROC Curve, normally abbreviated as AUC, AUCROC or AUROC, is a metric that indicate how good a binary model (a model where you are predicting between 2 classes, yes/no, positive/negative, go/no go, ...).
 
-[very nice auc plot](/assets/2018-07-16-auctest/20180716_aucplot.png)
+![very nice auc plot](/assets/2018-07-16-auctest/20180716_aucplot.png)
 
 The value itself comes from the area under the curve on the Sensitivity x 1-Specificity plot. If the curve is very close to the (0, 0) to (1, 1) line it is bad - it indicates that the model cannot separate well between the two classes.
 
@@ -37,14 +37,15 @@ Now, add a few columns: true positive (TP), false positive (FP), true negative (
 
 These metrics must be calculated for each threshold.
 
-For example, in my spreadsheet, the {% highlight code %}A{% endhighlight %} column contains the samples, the {% highlight code %}D{% endhighlight %} column contains the predictions, and the the threshold is in {% highlight code %}G3{% endhighlight %}.
-The TP is the number of participants predicted as positive ({% highlight code %}predicted score > threshold{% endhighlight %}) and that have label 1/yes/positive.
-TP is calculated using {% highlight code %} =COUNTIFS($D$3:$D$102,">="&G3, $A$3:$A$102,1) {% endhighlight %}. In my case the data go from row 3 to 102, these numbers can be modified as needed.
+For example, in my spreadsheet, the `A` column contains the samples, the `D` column contains the predictions, and the the threshold is in `G3`.
+The TP is the number of participants predicted as positive (`predicted score > threshold`) and that have label 1/yes/positive.
+TP is calculated using `=COUNTIFS($D$3:$D$102,">="&G3, $A$3:$A$102,1)`. In my case the data go from row 3 to 102, these numbers can be modified as needed.
 
 For the other values:
-FP: {% highlight code %} =COUNTIFS($D$3:$D$102,"<"&G3,$A$3:$A$102,1) {% endhighlight %}
-TN: {% highlight code %} =COUNTIFS($D$3:$D$103,"<"&G3,$A$3:$A$103,0) {% endhighlight %}
-FN: {% highlight code %} =COUNTIFS($D$3:$D$102,">="&G3,$A$3:$A$102,0) {% endhighlight %}
+
+FP {% highlight code %} =COUNTIFS($D$3:$D$102,"<"&G3,$A$3:$A$102,1) {% endhighlight %}
+TN {% highlight code %} =COUNTIFS($D$3:$D$103,"<"&G3,$A$3:$A$103,0) {% endhighlight %}
+FN {% highlight code %} =COUNTIFS($D$3:$D$102,">="&G3,$A$3:$A$102,0) {% endhighlight %}
 
 With these values, Sensitivity and 1-Specificity can be calculated for each point:
 $$Sensitivity = \frac{TP}{(TP + FP)}$$
@@ -58,13 +59,6 @@ To calculate the AUC value sum the different Sensitivity values for each increme
 
 More details about metrics check <a class="external-url" href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia</a>.
 
-Resulting files:
-
+File created here:
 - [Excel](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.xlsx)
 - [Open document format](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.ods)
-
-
-
-
-
-

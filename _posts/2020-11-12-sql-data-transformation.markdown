@@ -15,7 +15,7 @@ I needed to make the passage of SQL data from a production format to development
 
 In the database were different data sources, with different formats, versions and data coverage.
 
-The transformation was done in SQL using {% highlight code %} common table expression {% endhighlight %}.
+The transformation was done in SQL using `common table expression`.
 
 At one of the data sources the transformation "failed", as in the SQL block didn't return anything and there were no notifications, warnings or information monitored.
 
