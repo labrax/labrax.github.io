@@ -9,7 +9,7 @@ tags:
  - fake 
  - generated data
 ---
-This day we needed some nice plots to illustrate a data science presentation.
+The other day we needed some nice plots to illustrate a presentation.
 
 A quick data generation in [Excel](/assets/2019-10-25-generated-data/20191025_generated_plots.xlsx) can make wonders.
 
