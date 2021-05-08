@@ -1,0 +1,70 @@
+---
+layout: single
+title:  "Area Under the ROC Curve (AUC)"
+date:   2018-07-16 20:00:00 +0100
+categories: 
+ - data science
+tags: 
+ - excel 
+ - metrics
+ - AUC
+---
+Area Under the ROC Curve, normally abbreviated as AUC, AUCROC or AUROC, is a metric that indicate how good a binary model (a model where you are predicting between 2 classes, yes/no, positive/negative, go/no go, ...).
+
+[very nice auc plot](/assets/2018-07-16-auctest/20180716_aucplot.png)
+
+The value itself comes from the area under the curve on the Sensitivity x 1-Specificity plot. If the curve is very close to the (0, 0) to (1, 1) line it is bad - it indicates that the model cannot separate well between the two classes.
+
+## What do I need to calculate it?
+
+Well. First you need a model. Get the predictions for the dataset you are assessing, and have the real/true label of the prediction made.
+
+## How to calculate it?
+
+*Sorry for not going into much details, you need to know some Excel to go well here.*
+
+First, get a list of all the thresholds, this will indicate how good the model is at each point of the curve, forming the AUCROC curve.
+
+Add these thresholds in different rows for a new column (it is best having a new sheet for this):
+- If your prediction is in the 0 to 100 interval, go with values 0 to 100 in steps of 1. You'll end up with a list like 0, 1, 2, 3, ..., 97, 98, 99, 100. 
+- If the prediction range is 0 to 1 use steps of 0.01. You'll end up with a list of elements 0, 0.01, 0.02, ..., 0.97, 0.98, 0.99, 1.
+
+Now, add a few columns: true positive (TP), false positive (FP), true negative (TN), false negative (FN). 
+- TP is the number of correctly classified positive element.
+- FP is the number of wrongly classified positive element.
+- TN is the number of correctly classified negative element.
+- FN is the number of wrongly classified negative element.
+
+These metrics must be calculated for each threshold.
+
+For example, in my spreadsheet, the {% highlight code %}A{% endhighlight %} column contains the samples, the {% highlight code %}D{% endhighlight %} column contains the predictions, and the the threshold is in {% highlight code %}G3{% endhighlight %}.
+The TP is the number of participants predicted as positive ({% highlight code %}predicted score > threshold{% endhighlight %}) and that have label 1/yes/positive.
+TP is calculated using {% highlight code %} =COUNTIFS($D$3:$D$102,">="&G3, $A$3:$A$102,1) {% endhighlight %}. In my case the data go from row 3 to 102, these numbers can be modified as needed.
+
+For the other values:
+FP: {% highlight code %} =COUNTIFS($D$3:$D$102,"<"&G3,$A$3:$A$102,1) {% endhighlight %}
+TN: {% highlight code %} =COUNTIFS($D$3:$D$103,"<"&G3,$A$3:$A$103,0) {% endhighlight %}
+FN: {% highlight code %} =COUNTIFS($D$3:$D$102,">="&G3,$A$3:$A$102,0) {% endhighlight %}
+
+With these values, Sensitivity and 1-Specificity can be calculated for each point:
+$$Sensitivity = \frac{TP}{(TP + FP)}$$
+$$1-Specificity = 1 - \frac{TN}{(TN + FN)}$$
+
+These will indicate how good the model is at each threshold, and with these thresholds you can form the AUC curve.
+
+To plot, have 1-Specificity (your X) before the Sensitivity (your Y) column, and the spreadsheet program will do it without anything further.
+
+To calculate the AUC value sum the different Sensitivity values for each increment step you used, for example, $$0.01 x Sensitivity$$
+
+More details about metrics check <a class="external-url" href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia</a>.
+
+Resulting files:
+
+- [Excel](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.xlsx)
+- [Open document format](/assets/2018-07-16-auctest/20180716_auctests_calculated_auc_in_excel.ods)
+
+
+
+
+
+
