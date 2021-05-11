@@ -82,7 +82,7 @@ footer:
   links:
     - label: "Privacy Policy"
       icon: "fas fa-fw fa-link"
-      url: "https://labrax.github.io/privacy-policy/"
+      url: "https://labrax.github.io/privacy_policy/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/labrax"
