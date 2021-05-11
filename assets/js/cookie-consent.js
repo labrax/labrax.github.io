@@ -1,4 +1,5 @@
 function clean_cookies() {
+	console.log("cleaning cookies");
     var cookies = document.cookie.split("; ");
     for (var c = 0; c < cookies.length; c++) {
         var d = window.location.hostname.split(".");
@@ -37,6 +38,7 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
+	  console.log("a");
 	  clean_cookies();
     }
   },
@@ -49,6 +51,7 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
+	  console.log("b");
 	  clean_cookies();
     }
   },
@@ -56,6 +59,7 @@ window.cookieconsent.initialise({
     var type = this.options.type;
     if (type == 'opt-in') {
       // disable cookies
+	  console.log("c");
 	  clean_cookies();
     }
     if (type == 'opt-out') {
