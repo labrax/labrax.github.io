@@ -20,6 +20,7 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
+	  document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
     }
   },
   onStatusChange: function(status, chosenBefore) {
@@ -31,12 +32,14 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
+	  document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
     }
   },
   onRevokeChoice: function() {
     var type = this.options.type;
     if (type == 'opt-in') {
       // disable cookies
+	  document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
     }
     if (type == 'opt-out') {
       // enable cookies
