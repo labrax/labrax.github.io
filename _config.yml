@@ -62,18 +62,21 @@ author:
   avatar : "/assets/images/1585845748654.jfif"
   bio    : "Computer Engineer, IoT hobbyist, Data Scientist"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://labrax.github.io/"
+#    - label: "Website"
+#      icon: "fas fa-fw fa-link"
+#      url: "https://labrax.github.io/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:victor.roth.cardoso+vrothnotes@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/vroth_0"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/labrax"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/vrothcardoso/"
 
 footer:
   links:
@@ -83,9 +86,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/labrax"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/vrothcardoso/"
 
 defaults:
   # _posts
@@ -113,3 +116,12 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+after_footer_scripts:
+  - /assets/js/cookie-consent.js
+
+analytics:
+    provider: "custom"
+    google:
+        tracking_id: "G-H0J6DQX1CR"
+        anonymize_ip: true
