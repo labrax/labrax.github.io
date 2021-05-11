@@ -127,4 +127,4 @@ analytics:
   provider: "custom"
   google:
     tracking_id: "G-H0J6DQX1CR"
-    anonymize_ip: false
+    anonymize_ip: true

@@ -1,18 +1,11 @@
 function clean_cookies() {
-	console.log("cleaning cookies");
-    var cookies = document.cookie.split("; ");
-    for (var c = 0; c < cookies.length; c++) {
-        var d = window.location.hostname.split(".");
-        while (d.length > 0) {
-            var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
-            var p = location.pathname.split('/');
-            document.cookie = cookieBase + '/';
-            while (p.length > 0) {
-                document.cookie = cookieBase + p.join('/');
-                p.pop();
-            };
-            d.shift();
-        }
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 }
 
@@ -38,7 +31,6 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
-	  console.log("a");
 	  clean_cookies();
     }
   },
@@ -51,7 +43,6 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
-	  console.log("b");
 	  clean_cookies();
     }
   },
@@ -59,7 +50,6 @@ window.cookieconsent.initialise({
     var type = this.options.type;
     if (type == 'opt-in') {
       // disable cookies
-	  console.log("c");
 	  clean_cookies();
     }
     if (type == 'opt-out') {
