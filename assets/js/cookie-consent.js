@@ -38,13 +38,21 @@ window.cookieconsent.initialise({
   onStatusChange: function(status, chosenBefore) {
     var type = this.options.type;
     var didConsent = this.hasConsented();
-    if (type == 'opt-in' && didConsent) {
-      // enable cookies
-      loadGAonConsent();
+    if (type == 'opt-in') {
+	  if(didConsent) {
+        // enable cookies
+		loadGAonConsent();
+	  } else {
+		clean_cookies();
+	  }
     }
-    if (type == 'opt-out' && !didConsent) {
-      // disable cookies
-      clean_cookies();
+    if (type == 'opt-out') {
+	  if(!didConsent) {
+		  // disable cookies
+	      clean_cookies();
+	  } else {
+		  loadGAonConsent();
+	  }
     }
   },
   onRevokeChoice: function () {
