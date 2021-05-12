@@ -31,7 +31,7 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
-	  clean_cookies();
+      clean_cookies();
     }
   },
   onStatusChange: function(status, chosenBefore) {
@@ -43,14 +43,14 @@ window.cookieconsent.initialise({
     }
     if (type == 'opt-out' && !didConsent) {
       // disable cookies
-	  clean_cookies();
+      clean_cookies();
     }
   },
   onRevokeChoice: function() {
     var type = this.options.type;
     if (type == 'opt-in') {
       // disable cookies
-	  clean_cookies();
+      clean_cookies();
     }
     if (type == 'opt-out') {
       // enable cookies
