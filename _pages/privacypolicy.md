@@ -17,7 +17,7 @@ Some information are collected for security and analytics purposes. These are:
 
 ## Cookies
 
-We use cookies from Google, a third-party partner, for marketing and analytcs purposes. Users opt-in accepting the privacy banner.
+We use cookies from Google, a third-party partner, for marketing and analytics purposes. Users opt-in accepting the privacy banner.
 These cookies can be removed/disabled in the web browser options.
 
 For more information send an e-mail to [victor.roth.cardoso+vrothnotes@gmail.com](mailto:victor.roth.cardoso+vrothnotes@gmail.com).

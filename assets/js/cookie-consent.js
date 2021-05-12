@@ -46,16 +46,5 @@ window.cookieconsent.initialise({
       // disable cookies
       clean_cookies();
     }
-  },
-  onRevokeChoice: function() {
-    var type = this.options.type;
-    if (type == 'opt-in') {
-      // disable cookies
-      clean_cookies();
-    }
-    if (type == 'opt-out') {
-      // enable cookies
-      loadGAonConsent();
-    }
   }
 });
