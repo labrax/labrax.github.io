@@ -124,5 +124,8 @@ analytics:
     tracking_id: "G-H0J6DQX1CR"
     anonymize_ip: true
 
+footer_scripts:
+  - /assets/js/cookie-bar.js
+
 after_footer_scripts:
   - /assets/js/cookie-consent.js
