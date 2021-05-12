@@ -25,12 +25,12 @@
                 return t.length < 2 ? void 0 : t.pop().split(";").shift()
             },
             setCookie: function(e, t, i, n, o, s) {
-              	if(t == 'allow') {
-                  var r = new Date;
-                  r.setHours(r.getHours() + 24 * (i || 365));
-                  var a = [e + "=" + t, "expires=" + r.toUTCString(), "path=" + (o || "/")];
-                  n && a.push("domain=" + n), s && a.push("secure"), document.cookie = a.join(";")
-                }
+              if(t == 'allow') {
+                var r = new Date;
+                r.setHours(r.getHours() + 24 * (i || 365));
+                var a = [e + "=" + t, "expires=" + r.toUTCString(), "path=" + (o || "/")];
+                n && a.push("domain=" + n), s && a.push("secure"), document.cookie = a.join(";")
+              }
             },
             deepExtend: function(e, t) {
                 for (var i in t) t.hasOwnProperty(i) && (i in e && this.isPlainObject(e[i]) && this.isPlainObject(t[i]) ? this.deepExtend(e[i], t[i]) : e[i] = t[i]);
