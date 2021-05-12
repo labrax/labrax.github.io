@@ -1,6 +1,7 @@
 function clean_cookies() {
     var cookies = document.cookie.split(";");
-
+    console.log('cookies:');
+    console.log(cookies);
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i];
         var eqPos = cookie.indexOf("=");
