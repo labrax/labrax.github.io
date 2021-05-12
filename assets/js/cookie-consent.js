@@ -1,12 +1,12 @@
 function clean_cookies() {
     var cookies = window.document.cookie.split(";");
-    console.log('cookies:');
-    console.log(cookies);
     for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i];
         var eqPos = cookie.indexOf("=");
         var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        window.document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        window.document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        window.document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;domain=";
+        window.document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;domain=" + location.hostname.replace(/^www\./i, "");
     }
 }
 
