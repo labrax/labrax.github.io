@@ -12,7 +12,7 @@ A set of steps to a setup.
 
 These might be outdated. I'll keep these for archiving reasons.
 
-Set the keys and the source for R as in: https://cran.rstudio.com/bin/linux/ubuntu/
+Set the keys and the source for R as in: [https://cran.rstudio.com/bin/linux/ubuntu/](https://cran.rstudio.com/bin/linux/ubuntu/).
 
 ## Basic R packages
 ```bash
@@ -59,7 +59,7 @@ sudo apt-get build-dep r-cran-rmpi
 
 ### Fix JAVA_HOME variable
 
-Based on https://askubuntu.com/questions/175514/how-to-set-java-home-for-java
+Based on [https://askubuntu.com/questions/175514/how-to-set-java-home-for-java](https://askubuntu.com/questions/175514/how-to-set-java-home-for-java).
 
 Reconfigure Java on R
 ```bash
@@ -68,7 +68,7 @@ sudo R CMD javareconf
 
 ### Install Bioconductor
 
-Based on https://www.bioconductor.org/install/
+Based on [https://www.bioconductor.org/install/](https://www.bioconductor.org/install/).
 
 In R:
 ```bash
@@ -81,12 +81,7 @@ Still on R studio
 BiocInstaller::biocLite("caret", dependencies=c("Depends", "Suggests"))
 ```
 
-Book/Tutorial on caret (_C_lassification _A_nd _RE_gression _T_raining)
-https://topepo.github.io/caret
-
-Other links:
-https://www.rdocumentation.org/packages/plyr/versions/1.8.4/topics/join
-
-Can be related:
-[R Caret information](https://topepo.github.io/caret/)
-[Applied Predictive Modeling](http://appliedpredictivemodeling.com/)
+Related:
+- [R Caret information](https://topepo.github.io/caret/)
+- [Applied Predictive Modeling](http://appliedpredictivemodeling.com/)
+- [plyr library](https://www.rdocumentation.org/packages/plyr/versions/1.8.4/topics/join)
