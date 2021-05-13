@@ -17,7 +17,7 @@ title: vroth notes
 email: victor.roth.cardoso+vrothnotes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my page. In this page you'll find some notes, illustrations, and more on my computer engineering, IoT hobbyist and data scientist.
-twitter_username: vroth_0
+twitter_username: vrothCardoso
 github_username: labrax
 minimal_mistakes_skin: default
 search: true
@@ -74,7 +74,7 @@ author:
       url: "https://www.linkedin.com/in/vrothcardoso/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/vroth_0"
+      url: "https://twitter.com/vrothCardoso"
 
 footer:
   links:
@@ -89,7 +89,7 @@ footer:
       url: "https://www.linkedin.com/in/vrothcardoso/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/vroth_0"
+      url: "https://twitter.com/vrothCardoso"
 
 defaults:
   # _posts
