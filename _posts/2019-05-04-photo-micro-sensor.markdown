@@ -39,7 +39,10 @@ The component list for this experiment:
 - 10kΩ, 100kΩ or 1MΩ sensor resistor (in my experience, the higher the better).
 - SX1137 photomicrosensor or, in my case, the board extracted from a printer.
 
-![photomicrosensor front](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor-front.png) ![photomicrosensor back](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor-back.png)
+![photomicrosensor front](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor-front.png) 
+
+![photomicrosensor back](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor-back.png)
+
 Figure: Component collected from the printer. 
 On the left figure, the first block on the left is the detector, the one on the right is the emitter. 
 On the right figure, A is the anode (+), K is the cathode (-) for the emitter. E is the emitter and C is the collector for the detector.
@@ -50,7 +53,7 @@ The collector from was connected to the sensor resistor and the analog input 0 (
 This way analog input is measuring what is coming from the output sensor.
 
 ![diagram](/assets/2019-05-04-photo-micro-sensor/Nano photomicrosensor_bb.png)
-Figure: Diagram. The detector resistor in the diagram is 10k - better performance is obtained with higher values. Fritzing file can be obtained [here](/assets/2019-05-04-photo-micro-sensor/Nano photomicrosensor.fzz).
+Figure: The detector resistor in the diagram is 10k - better performance is obtained with higher values. Fritzing file can be obtained [here](/assets/2019-05-04-photo-micro-sensor/Nano photomicrosensor.fzz).
 
 ![nano setup](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor.png)
 ![photomicrosensor wires](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor-connector.png)
@@ -93,4 +96,3 @@ This is due to the resistors used.
 We are measuring the difference of voltage in the resistor. 
 In the case of 10kΩ there is a very small drop in voltage in the resistor! 
 If the resistor used is incremented to 100kΩ or even 1MΩ the signal is clearer!
-
