@@ -6,7 +6,7 @@ categories:
  - iot
 tags: 
  - sensors
- - sx1137, 
+ - sx1137
  - ee-sx1137-p2
  - CMKI-P3X
  - arduino
@@ -14,10 +14,10 @@ tags:
  - analog input
  - plotter
 ---
-A bit on how to use this sensor.
+Omron EE-SX1137 Photomicrosensor is used to identify if there is an obstruction in the apperture, commonly used in printers.
 
-Omron EE-SX1137 Photomicrosensor is a discontinuated product since March 2020 [ref](https://components.omron.com/product-detail?partNumber=EE-SX1137).
-It is used to identify if there is an obstruction in the apperture, commonly used in printers.
+Although it has been discontinued since March 2020 [ref](https://components.omron.com/product-detail?partNumber=EE-SX1137), there are plenty of other components that operate in a similar fashion.
+
 
 I had a lot of trouble finding good instruction on how to use this photomicrosensor.
 The best implementation I could find online comes from [Z-Hut](http://thezhut.com/?page_id=974).
