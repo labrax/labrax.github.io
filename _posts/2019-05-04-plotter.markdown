@@ -1,0 +1,57 @@
+---
+layout: single
+title:  "Plotting IoT device data"
+date:   2019-05-04 19:50:00 +0100
+categories: 
+ - iot
+tags: 
+ - install
+ - sensors
+ - plotter
+ - linux
+ - ubuntu
+---
+Data visualisation is essential on IoT devices.
+
+These might be outdated. I'll keep these for archiving reasons.
+
+First, the requirements:
+1. Install Atom
+  - {% highlight bash %} sudo add-apt-repository ppa:webupd8team/atom {% endhighlight %}
+  - {% highlight bash %} sudo apt update; sudo apt install atom {% endhighlight %}
+2. Install PlatformIO - https://platformio.org/install
+  - Select the Atom option
+3. On PlatformIO home, click on the Libraries link in the right side of the tab. Search for Plotter (by Devin Conley).
+4. Download the [listener](https://github.com/devinaconley/arduino-plotter/wiki/Installation-and-Quickstart).
+
+Basic usage:
+1. Create a project from PlatformIO Home
+  - Select the board (in my case Arduino Nano 328)
+2. Insert the code
+3. Upload
+4. Open the listener
+
+{% highlight c %}
+#include <Arduino.h>
+#include "Plotter.h"
+
+Plotter p;
+double x;
+
+void setup() {
+  p.Begin();
+  p.AddTimeGraph( "0", 500, "x label", x );
+}
+
+void loop() {
+  x = analogRead(0);
+  p.Plot();
+  delay(100);
+}
+{% endhighlight %}
+
+Some details:
+- This does not work in combination with the serial logger.
+- It is possible to insert multiple graphs: to do it, multiply the line AddTimeGraph with multiple graphs with different “x” variables. Set the variables when reading from an input and plot them.
+
+An example of use of this setup can be seen [here]({{ site.baseurl }}{% post_url 2019-05-04-photo-micro-sensor %}).

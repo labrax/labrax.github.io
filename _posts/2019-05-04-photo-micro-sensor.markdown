@@ -18,7 +18,6 @@ Omron EE-SX1137 Photomicrosensor is used to identify if there is an obstruction 
 
 Although it has been discontinued since March 2020 [ref](https://components.omron.com/product-detail?partNumber=EE-SX1137), there are plenty of other components that operate in a similar fashion.
 
-
 I had a lot of trouble finding good instruction on how to use this photomicrosensor.
 The best implementation I could find online comes from [Z-Hut](http://thezhut.com/?page_id=974).
 
@@ -86,7 +85,7 @@ Even using other types of surfaces and semi-opaque materials should do the job!
 ![sensor non blocked](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor_open.png) ![sensor blocked](/assets/2019-05-04-photo-micro-sensor/nano-photomicrosensor_closed.png)
 Figure: the photomicrosensor with and without the slot blocked.
 
-When using a plotter software this is the output I got:
+When using a plotter software this is the output I got on [Plotter]({{ site.baseurl }}{% post_url 2019-05-04-plotter %}):
 ![sensor output graph](/assets/2019-05-04-photo-micro-sensor/nano-microphotosensor.png)
 
 Figure: the measured values before (noisy positive values until the drop), during (zero values) and after (noisy positive values until the end) inserting a piece of paper in the slot.
