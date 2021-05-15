@@ -1,14 +1,15 @@
 ---
 layout: single
-title:  "Install R with Bioconductor on Linux"
+title:  "Install R with Bioconductor on Linux Ubuntu"
 date:   2017-05-12 20:00:00 +0100
 categories: 
  - data science
 tags: 
  - install
+ - linux
  - ubuntu
 ---
-A set of steps to a setup.
+A set of steps to setting up R and Bioconductor on Ubuntu.
 
 These might be outdated. I'll keep these for archiving reasons.
 

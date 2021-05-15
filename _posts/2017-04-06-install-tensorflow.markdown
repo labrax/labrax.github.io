@@ -1,16 +1,19 @@
 ---
 layout: single
-title:  "Setup TensorFlow on Linux"
+title:  "Setup TensorFlow on Linux Ubuntu"
 date:   2017-04-06 20:00:00 +0100
 categories: 
  - data science
 tags: 
  - install
+ - linux
  - ubuntu
 ---
-A set of steps to a setup.
+Installing TensorFlow requires quite a few steps.
 
 These might be be outdated. I'll keep these for archiving reasons.
+
+I suggest new installs to use a docker setup instead.
 
 ### Install latest gpu driver if needed
 ```bash
