@@ -17,8 +17,8 @@ These might be outdated. I'll keep these for archiving reasons.
 
 First, the requirements:
 1. Install Atom
-  - {% highlight bash %} sudo add-apt-repository ppa:webupd8team/atom {% endhighlight %}
-  - {% highlight bash %} sudo apt update; sudo apt install atom {% endhighlight %}
+  - sudo add-apt-repository ppa:webupd8team/atom
+  - sudo apt update; sudo apt install atom
 2. Install PlatformIO - https://platformio.org/install
   - Select the Atom option
 3. On PlatformIO home, click on the Libraries link in the right side of the tab. Search for Plotter (by Devin Conley).
@@ -26,7 +26,7 @@ First, the requirements:
 
 Basic usage:
 1. Create a project from PlatformIO Home
-  - Select the board (in my case Arduino Nano 328)
+  - Select the board (in this example, it was an Arduino Nano 328)
 2. Insert the code
 3. Upload
 4. Open the listener
