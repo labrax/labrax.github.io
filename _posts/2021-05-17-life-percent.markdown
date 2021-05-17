@@ -9,10 +9,12 @@ tags:
 ---
 This last year with COVID-19 made many people think about their lives.
 
-And for me it was not difference.
+And for me it was not different.
+
 I sometimes wonder about the last *N* months, and how much it was over my lived life, and on the overall scale of how much I expect to live.
 
 ![overall perspective chart](/assets/2021-05-17-life-percent/20210517_figure_overall_last_year.png)
+
 Figure: Perspective over the whole life. In orange what percentage of the life over the last year, in grey the percentage over the expected lifetime.
 
 Not only when you are younger you have many new experiences, these experiences account for most of your life. 
@@ -21,7 +23,7 @@ Any year lived will still account for the same overall percentage, but they acco
 Thinking of the 4 years when I did my PhD, they accounted for about 14% of my life up to that stage.
 And they are expected to count for about 5% of my life!
 
-That is quite an amount of it!
+That is quite an amount of time!
 
 **The calculator:**
 <form>
