@@ -1,13 +1,11 @@
 ---
 layout: single
-title:  "Life lived percentage"
+title:  "Lived life percentage"
 date:   2021-05-17 20:00:00 +0100
 categories: 
  - philosophy
-tags: 
- - link
 ---
-This last year with COVID-19 made many people think about their lives.
+This last year with COVID-19 made many people think about their lifes.
 
 And for me it was not different.
 
