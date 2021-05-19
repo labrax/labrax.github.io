@@ -27,22 +27,22 @@ That is quite an amount of time!
 <form>
 	<div style="float:left;">
 		<label for="age_years">Your age (years):</label>
-		<input type="number" id="age_years" name="age_years" value="28" onkeyup="update_model()">
+		<input type="number" id="age_years" name="age_years" value="28" onchange="update_model()">
 		<label for="age_months">Months (optional):</label>
-		<input type="number" id="age_months" name="age_months" value="0" onkeyup="update_model()">
+		<input type="number" id="age_months" name="age_months" value="0" onchange="update_model()">
 	</div>
 	
 	<div style="float:right;">
 		<label for="period_years">Period of interest (years):</label>
-		<input type="number" id="period_years" name="period_years" value="4" onkeyup="update_model()">
+		<input type="number" id="period_years" name="period_years" value="4" onchange="update_model()">
 		<label for="period_months">Months (optional):</label>
-		<input type="number" id="period_months" name="period_months" value="0" onkeyup="update_model()">
+		<input type="number" id="period_months" name="period_months" value="0" onchange="update_model()">
 	</div>
 	<div style="clear:both;">&nbsp;</div>
 		
 	<div style="float:left;">
 		<label for="expectancy_years">Life expectancy (years):</label>
-		<input type="number" id="expectancy_years" name="expectancy_years" value="75" onkeyup="update_model()">
+		<input type="number" id="expectancy_years" name="expectancy_years" value="75" onchange="update_model()">
 	</div>  
 	<div style="clear:both;">&nbsp;</div>
 	
